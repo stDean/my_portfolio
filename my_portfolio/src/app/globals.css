@@ -19,6 +19,7 @@ html {
   justify-content: center;
   overflow: hidden;
 }
+
 body {
   background-color: #011627;
   border: 1px solid #1E2D3D;
@@ -28,4 +29,10 @@ body {
   width: 98vw;
   height: 95vh;
   position: relative;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    width: 95vw;
+  }
 }

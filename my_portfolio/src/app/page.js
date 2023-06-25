@@ -1,7 +1,9 @@
 export default function Home() {
   return (
     <main>
-      <h1>Hello America. Welcome to my Portfolio web page, hope you enjoy it!</h1>
+      <p>
+        This is Sheriff Dean's Portfolio website.
+      </p>
     </main>
   )
 }
