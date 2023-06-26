@@ -1,12 +1,10 @@
-main {
+.main {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10%;
 
   .left {
-    z-index: 100;
-
     .top {
       margin-bottom: 50px;
 

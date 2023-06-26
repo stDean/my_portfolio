@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 
 import './navbar.styles.scss';
+import { usePathname } from 'next/navigation';
 
 const navData = [
   {
@@ -36,8 +37,8 @@ const navData = [
 
 export default function NavBar() {
 
+  const path = usePathname()
   const [toggle, setToggle] = useState(false);
-  const [isActive, setIsActive] = useState('/');
 
   return (
     <nav>
@@ -48,8 +49,7 @@ export default function NavBar() {
           <Link
             key={item.id}
             href={item.path}
-            className={`${item.left && item.left} ${isActive === item.path && 'active'}`}
-            onClick={() => setIsActive(item.path)}
+            className={`${item.left && item.left} ${path === item.path && 'active'}`}
           >
             {item.name}
           </Link>

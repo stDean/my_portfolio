@@ -1,9 +1,12 @@
+import dynamic from 'next/dynamic';
+
+// const Game = dynamic(() => import('@/container/game'), { ssr: false });
 import { Game } from '@/container';
-import './main.styles.scss';
+import '@/styles/main.styles.scss';
 
 export default function Home() {
   return (
-    <main>
+    <div className='main'>
       <div className='left'>
         <div className="top">
           <p className="intro">👋 ¡Hola!, Je suis</p>
@@ -32,6 +35,6 @@ export default function Home() {
       <div className='right'>
         <Game />
       </div>
-    </main>
+    </div>
   )
 }
