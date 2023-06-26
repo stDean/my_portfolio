@@ -1,4 +1,5 @@
-import './main.styles.scss'
+import { Game } from '@/container';
+import './main.styles.scss';
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
       </div>
 
       <div className='right'>
-        Right Side!!
+        <Game />
       </div>
     </main>
   )
