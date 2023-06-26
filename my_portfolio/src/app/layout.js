@@ -11,6 +11,9 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+  const now = new Date();
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -18,7 +21,7 @@ export default function RootLayout({ children }) {
 
         {children}
 
-        <Footer />
+        <Footer time={now.getTime()} />
       </body>
     </html>
   )

@@ -5,12 +5,9 @@ import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from 'react-icons/ai';
 
 import './footer.styles.scss';
 
-export default function Footer() {
+export default function Footer({ time }) {
 
-  const time = new Date().toLocaleTimeString('en-US', {
-    hour12: false
-  });
-  const [currentTime, setCurrentTime] = useState(time)
+  const [currentTime, setCurrentTime] = useState(new Date(time));
   const footerData = [
     {
       id: 1,
@@ -23,7 +20,7 @@ export default function Footer() {
       path: 'https://twitter.com/code_DE4N'
     },
     {
-      id: 2,
+      id: 3,
       icon: <AiFillLinkedin />,
       path: '/',
       last: 'last'
@@ -32,10 +29,7 @@ export default function Footer() {
 
   useEffect(() => {
     const updateTime = () => {
-      const time = new Date().toLocaleTimeString('en-US', {
-        hour12: false
-      });
-      setCurrentTime(time)
+      setCurrentTime(new Date())
     }
 
     setInterval(updateTime, 1000);
@@ -64,7 +58,7 @@ export default function Footer() {
       }
 
       <div className="left">
-        {currentTime}
+        {currentTime.toLocaleTimeString('en-US', {hour12: false})}
       </div>
     </footer>
   )
