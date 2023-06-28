@@ -7,3 +7,4 @@ export { default as AboutIcons } from "./icons";
 export { default as SideNav } from "./sidenav";
 export { default as NavTop } from "./navtop";
 export { default as SubNav } from "./subnav";
+export { default as Code } from "./code";

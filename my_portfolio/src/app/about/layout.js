@@ -1,8 +1,8 @@
-import { RxDotFilled } from 'react-icons/rx';
+import { RxDotFilled } from "react-icons/rx";
 
 import "@/styles/globals.css";
 import "./about.styles.scss";
-import { AboutIcons, NavTop, SideNav, SubNav } from "@/components";
+import { AboutIcons, Code, NavTop, SideNav, SubNav } from "@/components";
 import { NavData } from "./NavData.data";
 
 export default function RootLayout({ children }) {
@@ -31,7 +31,9 @@ export default function RootLayout({ children }) {
         <div className="bottom">
           <div className="left_content">{children}</div>
 
-          <div className="right_content">Code</div>
+          <div className="right_content">
+            <Code />
+          </div>
         </div>
       </div>
     </div>
