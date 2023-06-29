@@ -1,4 +1,5 @@
 import "./contact.styles.scss";
+import { ContactContainer } from "@/container";
 import { ContactMenu, NavTop, SideNav } from "@/components";
 
 export default function page() {
@@ -8,6 +9,8 @@ export default function page() {
         <NavTop path="contact" mobilePath="_contact.me" />
         <ContactMenu />
       </SideNav>
+
+      <ContactContainer />
     </div>
   );
 }

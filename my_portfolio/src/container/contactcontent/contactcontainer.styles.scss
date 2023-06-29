@@ -1,0 +1,11 @@
+.contact_form {
+  border-right: 1px solid #1E2D3D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 850px) {
+    border: none;
+    margin-bottom: 15px;
+  }
+}
