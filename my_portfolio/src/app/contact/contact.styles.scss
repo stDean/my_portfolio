@@ -1,0 +1,8 @@
+.contact {
+  display: grid;
+  grid-template-columns: 250px repeat(2, 1fr);
+  position: relative;
+  border-right: 1px solid #1E2D3D;
+  overflow: hidden;
+  height: 100%;
+}
