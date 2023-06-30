@@ -10,3 +10,4 @@ export { default as SubNav } from "./subnav";
 export { default as Code } from "./code";
 export { default as ContactMenu } from "./contactmenu";
 export { default as ContactForm } from "./contactform";
+export { default as ContactText } from "./contacttext";

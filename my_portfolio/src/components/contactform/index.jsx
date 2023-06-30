@@ -1,22 +1,6 @@
-"use client";
-
-import { useState } from "react";
-
 import "./form.styles.scss";
 
-const ContactForm = () => {
-  const userData = {
-    name: "",
-    email: "",
-    message: "",
-  };
-  const [data, setData] = useState(userData);
-
-  const handleChangeInput = ({ target }) => {
-    const { name, value } = target;
-    setData({ ...data, [name]: value });
-  };
-
+const ContactForm = ({ data, handleChangeInput }) => {
   return (
     <div className="form">
       <div className="input_text">

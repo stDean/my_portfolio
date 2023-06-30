@@ -1,0 +1,30 @@
+.contact_val {
+  border-right: 1px solid #1E2D3D;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+
+  p {
+    max-width: 100%;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 7px;
+    top: 5px;
+    right: 2.75px;
+    background-color: #607B96;
+
+    @media screen and (max-width: 950px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    display: none;
+  }
+}

@@ -1,9 +1,9 @@
 .main_about {
   display: grid;
   grid-template-columns: 45px 205px 1fr;
-  position: relative;
-  overflow: hidden;
+  // position: relative;
   height: 100%;
+  overflow: hidden;
 
   .drop_down-link {
     padding: 20px;
@@ -15,8 +15,8 @@
     @media screen and (max-width: 650px) {
       padding: 0;
     }
-  }
-  
+  } 
+
   .content {
     overflow-y: scroll;
     display: flex;
@@ -49,7 +49,7 @@
         display: none;
       } 
     }
-    
+
     .bottom {
       display: flex;
       overflow: hidden;
@@ -59,12 +59,9 @@
 
       .left_content {
         flex: 1;
-        // position: sticky;
         border-right: 1px solid #1E2D3D;
         position: relative;
         padding: 15px;
-        overflow-x: hidden;
-        overflow-y: scroll;
 
         &::-webkit-scrollbar {
           width: 1px;
@@ -75,8 +72,6 @@
         }  
 
         @media screen and (max-width: 650px) {
-          overflow-y: scroll;
-          overflow-x: hidden;
           font-size: 16px;
 
           &::-webkit-scrollbar {
@@ -99,18 +94,21 @@
          display: none;
         }        
       }
+
+      @media screen and (max-width: 1110px) {
+        margin: 0;
+        border: none;
+        font-size: 14px;
+      }
+
+      @media screen and (max-width: 965px) {
+        width: 100%;
+      }
     }
 
-    @media screen and (max-width: 1110px) {
-      margin: 0;
-      border: none;
-      font-size: 14px;
+    @media screen and (max-width: 650px) {
+      overflow-y: hidden;
     }
-
-    @media screen and (max-width: 965px) {
-      width: 100%;
-    }
-  
   }
 
   @media screen and (max-width: 1110px) {
@@ -120,5 +118,6 @@
   @media screen and (max-width: 650px) {
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
   } 
 }
