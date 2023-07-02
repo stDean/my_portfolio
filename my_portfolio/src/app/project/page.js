@@ -1,18 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { DiReact } from "react-icons/di";
 import { TbBrandJavascript, TbBrandNextjs } from "react-icons/tb";
 import { AiFillHome } from "react-icons/ai";
+import { AiFillCaretDown, AiFillCaretRight } from "react-icons/ai";
 
 import "./project.styles.scss";
-import { NavTop, SideNav } from "@/components";
-import { client } from "@/client";
+import { NavTop, ProjectItem, SideNav } from "@/components";
 
 export default function page() {
   const [activeFilter, setActiveFilter] = useState("All");
-  const [works, setWorks] = useState([]);
-  const [filterWork, setFilterWork] = useState([]);
+  const [drop, setDrop] = useState(false);
 
   const category = [
     {
@@ -36,6 +35,8 @@ export default function page() {
       icon: <TbBrandNextjs />,
     },
   ];
+
+  const handleToggle = () => setDrop(drop => !drop);
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
@@ -69,6 +70,38 @@ export default function page() {
           ))}
         </div>
       </SideNav>
+
+       <div className="mobile">
+        <div className="parentNav" onClick={handleToggle}>
+          {drop ? <AiFillCaretDown /> : <AiFillCaretRight />}
+          <span>projects</span>
+        </div>
+
+        {
+          drop && (
+            <>
+              {
+                category.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className={`filter_work ${activeFilter === item.title ? 'item-active' : ''}`}
+                    onClick={() => handleWorkFilter(item.title)}
+                  >
+                    {item.icon}
+                    {item.title}
+                  </div>
+                ))
+              }
+            </>
+          )
+        }
+
+        <div className="title">
+          <p><span>projects /</span> {activeFilter}</p>
+        </div>
+      </div>
+
+      <ProjectItem activeFilter={activeFilter} />
     </div>
   );
 }
