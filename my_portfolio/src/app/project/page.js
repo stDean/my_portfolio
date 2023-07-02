@@ -1,17 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DiReact } from "react-icons/di";
 import { TbBrandJavascript, TbBrandNextjs } from "react-icons/tb";
 import { AiFillHome } from "react-icons/ai";
 import { AiFillCaretDown, AiFillCaretRight } from "react-icons/ai";
 
 import "./project.styles.scss";
-import { NavTop, ProjectItem, SideNav } from "@/components";
+import { NavTop, ProjectMenu, SideNav, Works } from "@/components";
+import { client } from "@/client";
 
 export default function page() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [drop, setDrop] = useState(false);
+  const [works, setWorks] = useState([]);
+  const [filterWork, setFilterWork] = useState([]);
+  const [status, setStatus] = useState("pending");
 
   const category = [
     {
@@ -36,7 +40,23 @@ export default function page() {
     },
   ];
 
-  const handleToggle = () => setDrop(drop => !drop);
+  useEffect(() => {
+    const query = '*[_type == "works"]';
+
+    client
+      .fetch(query)
+      .then((data) => {
+        setWorks(data);
+        setFilterWork(data);
+        setStatus("success");
+      })
+      .catch((e) => {
+        console.log(e);
+        setStatus("pending");
+      });
+  }, []);
+
+  const handleToggle = () => setDrop((drop) => !drop);
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
@@ -57,51 +77,53 @@ export default function page() {
 
         <div className="bottom">
           {category.map((item) => (
-            <div
+            <ProjectMenu
               key={item.id}
-              className={`filter_work ${
-                activeFilter === item.title ? "item-active" : ""
-              }`}
-              onClick={() => handleWorkFilter(item.title)}
-            >
-              {item.icon}
-              {item.title}
-            </div>
+              activeFilter={activeFilter}
+              handleWorkFilter={handleWorkFilter}
+              item={item}
+            />
           ))}
         </div>
       </SideNav>
 
-       <div className="mobile">
+      <div className="mobile">
         <div className="parentNav" onClick={handleToggle}>
           {drop ? <AiFillCaretDown /> : <AiFillCaretRight />}
           <span>projects</span>
         </div>
 
-        {
-          drop && (
-            <>
-              {
-                category.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className={`filter_work ${activeFilter === item.title ? 'item-active' : ''}`}
-                    onClick={() => handleWorkFilter(item.title)}
-                  >
-                    {item.icon}
-                    {item.title}
-                  </div>
-                ))
-              }
-            </>
-          )
-        }
+        {drop && (
+          <>
+            {category.map((item) => (
+              <ProjectMenu
+                key={item.id}
+                activeFilter={activeFilter}
+                handleWorkFilter={handleWorkFilter}
+                item={item}
+              />
+            ))}
+          </>
+        )}
 
         <div className="title">
-          <p><span>projects /</span> {activeFilter}</p>
+          <p>
+            <span>projects /</span> {activeFilter}
+          </p>
         </div>
       </div>
 
-      <ProjectItem activeFilter={activeFilter} />
+      <div className="right">
+        <h1>{activeFilter} Projects</h1>
+
+        <div className="works">
+          {status === "pending" ? (
+            <div>Loading...</div>
+          ) : (
+            filterWork.map((work, idx) => <Works key={idx} work={work} />)
+          )}
+        </div>
+      </div>
     </div>
   );
 }

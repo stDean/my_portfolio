@@ -36,6 +36,7 @@ main {
 
   @media screen and (max-width: 650px) {
     overflow-y: scroll;
+    margin-bottom: 15px;
 
     &::-webkit-scrollbar {
       width: 1px;

@@ -11,4 +11,5 @@ export { default as Code } from "./code";
 export { default as ContactMenu } from "./contactmenu";
 export { default as ContactForm } from "./contactform";
 export { default as ContactText } from "./contacttext";
-export { default as ProjectItem } from "./project";
+export { default as Works } from "./works";
+export { default as ProjectMenu } from "./projectmenu";
