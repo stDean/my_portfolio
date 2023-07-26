@@ -5,9 +5,11 @@ import { AiFillFolderOpen } from "react-icons/ai";
 import Link from "next/link";
 
 import "./subnav.styles.scss";
+import { usePathname } from "next/navigation";
 
 const SubNav = ({ item }) => {
   const [subnav, setSubNav] = useState(false);
+  const path = usePathname();
 
   const showSubNav = () => {
     setSubNav((subnav) => !subnav);
@@ -36,7 +38,7 @@ const SubNav = ({ item }) => {
       {subnav &&
         item.subNav.map((ele, idx) => (
           <Link
-            className={`dropdownlink ${({ isActive }) => isActive && "active"}`}
+            className={`dropdownlink ${path === ele.path && "active"}`}
             href={ele.path}
             key={idx}
           >

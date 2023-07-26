@@ -36,8 +36,25 @@ const navData = [
 ];
 
 export default function NavBar() {
-  const path = usePathname();
+  let path = usePathname();
   const [toggle, setToggle] = useState(false);
+
+  const active = (item) => {
+    let activePath;
+    if (path === item.path) {
+      activePath = item.path;
+    } else if (
+      path === "/about/personal" ||
+      path === "/about/skills" ||
+      path === "/about/formal" ||
+      path === "/about/non-formal" ||
+      path === "/about/hobbies"
+    ) {
+      activePath = "/about";
+    }
+
+    return activePath;
+  };
 
   return (
     <nav>
@@ -48,7 +65,7 @@ export default function NavBar() {
           key={item.id}
           href={item.path}
           className={`${item.left && item.left} ${
-            path === item.path && "active"
+            item.path === active(item) && "active"
           }`}
         >
           {item.name}
