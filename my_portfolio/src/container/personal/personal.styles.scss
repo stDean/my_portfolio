@@ -1,0 +1,34 @@
+.personal {
+  .personal_head {
+    display: none;
+    margin-bottom: 10px;
+    color: #fff;
+
+    span {
+      color: #607B96;
+    }
+
+    @media screen and (max-width: 650px) {
+      display: block;
+    }
+  }
+
+  .para {
+    font-size: 17px;
+
+    .hide {
+      @media screen and (max-width: 650px) {
+        display: none;
+      }
+    }
+
+    div {
+      margin-left: 20px;
+      opacity: .6;
+
+      @media screen and (max-width: 650px) {
+        opacity: 1;
+      }
+    }
+  }
+}
