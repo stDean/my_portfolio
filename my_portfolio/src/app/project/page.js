@@ -45,28 +45,29 @@ export default function page() {
 
     client
       .fetch(query)
-      .then((data) => {
+      .then(data => {
         setWorks(data);
         setFilterWork(data);
         setStatus("success");
       })
-      .catch((e) => {
-        console.log(e);
+      .catch(e => {
         setStatus("pending");
       });
   }, []);
 
-  const handleToggle = () => setDrop((drop) => !drop);
+  const handleToggle = () => setDrop(drop => !drop);
 
-  const handleWorkFilter = (item) => {
+  const handleWorkFilter = item => {
     setActiveFilter(item);
 
     setTimeout(() => {
       if (item === "All") {
         setFilterWork(works);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        setFilterWork(works.filter(work => work.tags.includes(item)));
       }
+
+      setDrop(false);
     }, 500);
   };
 
@@ -76,7 +77,7 @@ export default function page() {
         <NavTop path="projects" mobilePath="_projects" />
 
         <div className="bottom">
-          {category.map((item) => (
+          {category.map(item => (
             <ProjectMenu
               key={item.id}
               activeFilter={activeFilter}
@@ -95,7 +96,7 @@ export default function page() {
 
         {drop && (
           <>
-            {category.map((item) => (
+            {category.map(item => (
               <ProjectMenu
                 key={item.id}
                 activeFilter={activeFilter}

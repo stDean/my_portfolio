@@ -21,9 +21,9 @@
   .mobile {
     display: none;
 
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 750px) {
       display: block;
-      cursor: pointer;
+      cursor: pointer; 
 
       .parentNav {
         background-color: #1E2D3D;

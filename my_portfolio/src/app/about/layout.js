@@ -1,3 +1,6 @@
+"use client";
+
+import { useParams, useSearchParams } from "next/navigation";
 import { RxDotFilled } from "react-icons/rx";
 
 // import "@/styles/globals.css";
@@ -6,8 +9,12 @@ import { AboutIcons, Code, NavTop, SideNav, SubNav } from "@/components";
 import { NavData } from "./NavData.data";
 
 export default function RootLayout({ children }) {
+  const params = useParams();
+
+  const slug = params.slug ? params.slug : "personal";
+
   return (
-    <div className="main_about">
+    <main className="main_about">
       <AboutIcons />
 
       <SideNav>
@@ -23,7 +30,7 @@ export default function RootLayout({ children }) {
       <div className="content">
         <div className="top">
           <div className="top_content">
-            hello
+            {slug}
             <RxDotFilled />
           </div>
         </div>
@@ -36,6 +43,6 @@ export default function RootLayout({ children }) {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

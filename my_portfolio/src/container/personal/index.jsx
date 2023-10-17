@@ -1,21 +1,36 @@
-import "./personal.styles.scss"
+import "./personal.styles.scss";
 
 const Personal = () => {
   return (
     <div className="personal">
-      <p className="personal_head">{"//personal-info"} <span>/ bio</span></p>
-
-      <p className="para">
-        <span className='hide'>{"/*"}</span> <br />
-        <div>
-          I'm a web developer from Nigeria. My coding journey started in 2017 when a friend introduced me to front-end programming, and it has enthralled me ever since I wrote my first "Hello, World" in HTML and saw it displayed in the browser. <br /> <br />
-          Being self-taught is difficult and frustrating, and the scariest part for me when I first started was coming face to face with a problem that I couldn't solve and couldn't move forward because of. But, over time, I always figured things out, even if it took me days and multiple attempts. I appreciated the challenge, and it kept me motivated throughout my career as a developer.<br /> <br />
-          Web programming is an interest of mine. It allows me to push myself and apply a combination of technologies and creativity. I enjoy the ability to see results immediately and the never-ending learning process.
-        </div>
-        <span className='hide'>{"*/"}</span>
+      <p className="personal_head">
+        {"//personal-info"} <span>/ bio</span>
       </p>
-    </div>
-  )
-}
 
-export default Personal
+      <div className="para">
+        <span className="hide">{"/*"}</span> <br />
+        <p>
+          Hello there! I'm a web developer hailing from Nigeria, and my journey
+          into the enchanting realm of coding began in 2017. Back then, a friend
+          introduced me to the world of front-end programming, and it's been a
+          love affair ever since I penned my very first 'Hello, World' in HTML,
+          watching it pop up in the browser. Yes, I admit, it was love at first
+          code.
+          <br /> <br />
+          Now, here's the fun part: I've been on quite the adventure, teaching
+          myself the ropes of web development. I've battled some truly epic
+          coding dragons and emerged victorious, even if it meant sacrificing a
+          few nights of sleep. This journey has revealed my true passion for web
+          programming, where creativity and tech wizardry collide. I get a kick
+          out of seeing immediate results and, of course, the perpetual joy of
+          never-ending learning. So, if you're looking for a developer with a
+          knack for problem-solving, a love for the craft, and a dash of wit,
+          you've found your coder extraordinaire!"
+        </p>
+        <span className="hide">{"*/"}</span>
+      </div>
+    </div>
+  );
+};
+
+export default Personal;

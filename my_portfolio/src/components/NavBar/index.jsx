@@ -39,7 +39,7 @@ export default function NavBar() {
   let path = usePathname();
   const [toggle, setToggle] = useState(false);
 
-  const active = (item) => {
+  const active = item => {
     let activePath;
     if (path === item.path) {
       activePath = item.path;
@@ -58,9 +58,9 @@ export default function NavBar() {
 
   return (
     <nav>
-      <p className="logo">_dean</p>
+      <p className="logo">_D34N</p>
 
-      {navData.map((item) => (
+      {navData.map(item => (
         <Link
           key={item.id}
           href={item.path}
@@ -78,7 +78,7 @@ export default function NavBar() {
             <HiX onClick={() => setToggle(false)} />
             <div>
               <ul>
-                {navData.map((item) => (
+                {navData.map(item => (
                   <li key={item.id} onClick={() => setToggle(false)}>
                     <Link href={item.path}>{item.name}</Link>
                   </li>

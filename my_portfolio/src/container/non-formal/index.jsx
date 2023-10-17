@@ -3,7 +3,9 @@ import "./nonformal.styles.scss";
 const InFormal = () => {
   return (
     <div className="non_formal">
-      <p className="personal_head">{"//non-formal"} <span>/ bio</span></p>
+      <p className="personal_head">
+        {"//non-formal"} <span>/ bio</span>
+      </p>
 
       <div className="harvard">
         <h1>EDx</h1>
@@ -34,12 +36,8 @@ const InFormal = () => {
             </p>
 
             <ul>
-              <li>
-                HTML crash course for Beginners.
-              </li>
-              <li>
-                JavaScript crash course for Beginners.
-              </li>
+              <li>HTML crash course for Beginners.</li>
+              <li>JavaScript crash course for Beginners.</li>
             </ul>
           </li>
           <li>
@@ -48,9 +46,7 @@ const InFormal = () => {
             </p>
 
             <ul>
-              <li>
-                Next Js for Beginners.
-              </li>
+              <li>Next Js for Beginners.</li>
             </ul>
           </li>
           <li>
@@ -59,12 +55,8 @@ const InFormal = () => {
             </p>
 
             <ul>
-              <li>
-                Node.js Full course for beginners.
-              </li>
-              <li>
-                React Redux full course for beginners.
-              </li>
+              <li>Node.js Full course for beginners.</li>
+              <li>React Redux full course for beginners.</li>
             </ul>
           </li>
           <li>
@@ -73,9 +65,7 @@ const InFormal = () => {
             </p>
 
             <ul>
-              <li>
-                Node.js and Express.js full course.
-              </li>
+              <li>Node.js and Express.js full course.</li>
             </ul>
           </li>
           <li>
@@ -84,15 +74,23 @@ const InFormal = () => {
             </p>
 
             <ul>
-              <li>
-                PHP full course for beginners.
-              </li>
+              <li>PHP full course for beginners.</li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              <strong>Jeffery Way (Laracast)</strong>
+            </p>
+
+            <ul>
+              <li>Intro to PHP for beginners.</li>
+              <li>Intro to Laravel for beginners.</li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default InFormal
+export default InFormal;
