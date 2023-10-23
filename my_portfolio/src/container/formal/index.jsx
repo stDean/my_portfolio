@@ -3,7 +3,7 @@ import "./formal.styles.scss";
 const Formal = () => {
   return (
     <div className="formal">
-      <p className="personal_head">{"//formal"} <span>/ bio</span></p>
+      <p className="personal_head">{"// formal"} <span>/ bio</span></p>
 
       <div className="diploma">
         <p>

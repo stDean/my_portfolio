@@ -4,7 +4,7 @@ const Personal = () => {
   return (
     <div className="personal">
       <p className="personal_head">
-        {"//personal-info"} <span>/ bio</span>
+        {"// personal-info"} <span>/ bio</span>
       </p>
 
       <div className="para">

@@ -4,7 +4,7 @@ const InFormal = () => {
   return (
     <div className="non_formal">
       <p className="personal_head">
-        {"//non-formal"} <span>/ bio</span>
+        {"// non-formal"} <span>/ bio</span>
       </p>
 
       <div className="harvard">
