@@ -1,6 +1,19 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import "./form.styles.scss";
 
-const ContactForm = ({ data, handleChangeInput }) => {
+const ContactForm = ({ data, handleChangeInput, handleSubmit, status }) => {
+  const [disable, setDisable] = useState(true);
+
+  useEffect(() => {
+    if (data.name !== "" && data.email !== "" && data.message !== "") {
+      setDisable(false);
+    } else {
+      setDisable(true);
+    }
+  }, [data]);
+
   return (
     <div className="form">
       <div className="input_text">
@@ -34,7 +47,20 @@ const ContactForm = ({ data, handleChangeInput }) => {
         />
       </div>
 
-      <button type="submit">send-message</button>
+      <button
+        type="submit"
+        className={`${disable ? "disable__btn" : ""}`}
+        disabled={disable}
+        onClick={handleSubmit}
+      >
+        {status === "typing"
+          ? "send-message"
+          : status === "loading"
+          ? "sending..."
+          : status === "success"
+          ? "sent"
+          : "fail-to-send"}
+      </button>
     </div>
   );
 };

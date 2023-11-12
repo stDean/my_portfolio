@@ -8,7 +8,7 @@ import { AiFillCaretDown, AiFillCaretRight } from "react-icons/ai";
 
 import "./project.styles.scss";
 import { NavTop, ProjectMenu, SideNav, Works } from "@/components";
-import { client } from "@/client";
+import { client } from "@/config/client";
 
 export default function page() {
   const [activeFilter, setActiveFilter] = useState("All");

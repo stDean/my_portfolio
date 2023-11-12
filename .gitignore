@@ -3,3 +3,4 @@
 /studio/dist
 /my_portfolio/node_modules
 /my_portfolio/.next
+/my_portfolio/.env.local

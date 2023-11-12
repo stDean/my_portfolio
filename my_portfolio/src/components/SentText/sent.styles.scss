@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    color: white;
+    margin-bottom: 12px;
+  }
+
+  button {
+    padding: 15px 25px;
+    background-color: #1C2B3A;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 80px;
+    cursor: pointer;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

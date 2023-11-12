@@ -13,3 +13,4 @@ export { default as ContactForm } from "./contactform";
 export { default as ContactText } from "./contacttext";
 export { default as Works } from "./works";
 export { default as ProjectMenu } from "./projectmenu";
+export { default as Sent } from "./SentText";

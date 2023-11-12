@@ -8,6 +8,11 @@ import "./about.styles.scss";
 import { AboutIcons, Code, NavTop, SideNav, SubNav } from "@/components";
 import { NavData } from "./NavData.data";
 
+export const metadata = {
+  title: 'dean | about',
+  description: 'My portfolio home page.',
+}
+
 export default function RootLayout({ children }) {
   const params = useParams();
 

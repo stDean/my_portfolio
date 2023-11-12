@@ -1,5 +1,5 @@
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
-import { urlFor } from "@/client";
+import { urlFor } from "@/config/client";
 
 import "./works.styles.scss";
 
