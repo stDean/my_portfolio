@@ -10,7 +10,7 @@ import "./project.styles.scss";
 import { NavTop, ProjectMenu, SideNav, Works } from "@/components";
 import { client } from "@/config/client";
 
-export default function page() {
+export default function Page() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [drop, setDrop] = useState(false);
   const [works, setWorks] = useState([]);
