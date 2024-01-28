@@ -1,4 +1,4 @@
-import "./sidenav.styles.scss";
+import "./sideNav.styles.scss";
 
 const SideNav = ({ children }) => {
   return <div className="side">{children}</div>;
