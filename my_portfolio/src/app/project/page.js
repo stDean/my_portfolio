@@ -8,7 +8,7 @@ import { AiFillCaretDown, AiFillCaretRight } from "react-icons/ai";
 
 import "./project.styles.scss";
 import { NavTop, ProjectMenu, Works } from "@/components";
-import SideNav from "@/components/sidenav";
+import SideNav from "../../components/sidenav";
 import { client } from "@/config/client";
 
 export default function Page() {

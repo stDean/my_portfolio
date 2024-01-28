@@ -6,7 +6,7 @@ import { RxDotFilled } from "react-icons/rx";
 // import "@/styles/globals.css";
 import "./about.styles.scss";
 import { AboutIcons, Code, NavTop, SubNav } from "@/components";
-import SideNav from "@/components/sidenav"
+import SideNav from "../../components/sidenav";
 import { NavData } from "./NavData.data";
 
 // export const metadata = {
