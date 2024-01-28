@@ -11,7 +11,7 @@ const Personal = () => {
         <span className="hide">{"/*"}</span> <br />
         <p>
           Hello there! I'm a web developer hailing from Nigeria, and my journey
-          into the enchanting realm of coding began in 2017. Back then, a friend
+          into the enchanting realm of coding began in 2020. Back then, a friend
           introduced me to the world of front-end programming, and it's been a
           love affair ever since I penned my very first 'Hello, World' in HTML,
           watching it pop up in the browser. Yes, I admit, it was love at first
