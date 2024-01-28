@@ -7,8 +7,7 @@ import { AiFillHome } from "react-icons/ai";
 import { AiFillCaretDown, AiFillCaretRight } from "react-icons/ai";
 
 import "./project.styles.scss";
-import { NavTop, ProjectMenu, Works } from "@/components";
-import SideNav from "../../components/sidenav";
+import { NavTop, ProjectMenu, Works, SideNav } from "@/components";
 import { client } from "@/config/client";
 
 export default function Page() {
