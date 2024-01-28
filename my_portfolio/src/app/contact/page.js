@@ -1,6 +1,7 @@
 import "./contact.styles.scss";
 import { ContactContainer } from "@/container";
-import { ContactMenu, NavTop, SideNav } from "@/components";
+import { ContactMenu, NavTop } from "@/components";
+import SideNav from "@/components/sidenav";
 
 export default function page() {
   return (

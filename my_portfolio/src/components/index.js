@@ -13,4 +13,3 @@ export { default as ContactText } from "./contacttext";
 export { default as Works } from "./works";
 export { default as ProjectMenu } from "./projectmenu";
 export { default as Sent } from "./SentText";
-export { default as SideNav } from "./sidenav/index";
