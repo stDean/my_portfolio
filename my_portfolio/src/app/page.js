@@ -23,7 +23,9 @@ export default function Home() {
           <p>{"// surf around to know more about me and what i do."}</p>
 
           <p className="resume">
-            <a href="/">Resume</a>
+            <a href="https://resume-five-umber.vercel.app/" target="_blank">
+              Resume
+            </a>
           </p>
         </div>
       </div>
