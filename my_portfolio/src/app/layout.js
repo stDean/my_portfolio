@@ -1,17 +1,16 @@
-import { Inter } from 'next/font/google';
+import { Inter } from "next/font/google";
 
-import '@/styles/globals.css';
-import { Footer, NavBar } from '@/components';
+import "@/styles/globals.css";
+import { Footer, NavBar } from "@/components";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'dean | home',
-  description: 'My portfolio home page.',
-}
+  title: "dean | home",
+  description: "My portfolio home page."
+};
 
 export default function RootLayout({ children }) {
-
   const now = new Date();
 
   return (
@@ -24,5 +23,5 @@ export default function RootLayout({ children }) {
         <Footer time={now.getTime()} />
       </body>
     </html>
-  )
+  );
 }
