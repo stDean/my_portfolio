@@ -22,11 +22,11 @@ export default function Home() {
           <p>{"// a self taught web developer."}</p>
           <p>{"// surf around to know more about me and what i do."}</p>
 
-          <p className="resume">
+          {/* <p className="resume">
             <a href="https://resume-five-umber.vercel.app/" target="_blank">
               Resume
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
 
